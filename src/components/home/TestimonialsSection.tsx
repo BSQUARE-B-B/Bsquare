@@ -1,4 +1,9 @@
+import { useRef, useEffect } from 'react';
 import { Star } from 'lucide-react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const testimonials = [
   {
@@ -28,11 +33,74 @@ const testimonials = [
 ];
 
 export const TestimonialsSection = () => {
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const headerRef = useRef<HTMLDivElement>(null);
+  const cardsRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      // Header animation
+      gsap.from(headerRef.current?.children || [], {
+        y: 50,
+        opacity: 0,
+        duration: 1,
+        stagger: 0.2,
+        ease: 'power3.out',
+        scrollTrigger: {
+          trigger: headerRef.current,
+          start: 'top 80%',
+          toggleActions: 'play none none none',
+        },
+      });
+
+      // Cards stagger animation with 3D effect
+      const cards = cardsRef.current?.querySelectorAll('.testimonial-card');
+      if (cards) {
+        gsap.from(cards, {
+          y: 100,
+          opacity: 0,
+          rotationX: 15,
+          transformPerspective: 1000,
+          duration: 1,
+          stagger: 0.2,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: cardsRef.current,
+            start: 'top 75%',
+            toggleActions: 'play none none none',
+          },
+        });
+      }
+
+      // Stars animation
+      const stars = cardsRef.current?.querySelectorAll('.star-rating');
+      if (stars) {
+        stars.forEach((starContainer) => {
+          const starIcons = starContainer.querySelectorAll('svg');
+          gsap.from(starIcons, {
+            scale: 0,
+            rotation: 180,
+            duration: 0.4,
+            stagger: 0.08,
+            ease: 'back.out(1.7)',
+            scrollTrigger: {
+              trigger: starContainer,
+              start: 'top 90%',
+              toggleActions: 'play none none none',
+            },
+          });
+        });
+      }
+    });
+
+    return () => ctx.revert();
+  }, []);
+
   return (
-    <section className="section-padding bg-secondary">
+    <section ref={sectionRef} className="section-padding bg-secondary">
       <div className="container-wide">
         {/* Section Header */}
-        <div className="text-center mb-16 lg:mb-20">
+        <div ref={headerRef} className="text-center mb-16 lg:mb-20">
           <p className="text-sm font-medium text-muted-foreground uppercase tracking-widest mb-4">
             Client Stories
           </p>
@@ -43,14 +111,14 @@ export const TestimonialsSection = () => {
         </div>
 
         {/* Testimonials Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <div ref={cardsRef} className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {testimonials.map((testimonial) => (
             <div
               key={testimonial.id}
-              className="p-8 lg:p-10 rounded-2xl bg-background transition-all duration-500 hover:shadow-apple-lg"
+              className="testimonial-card p-8 lg:p-10 rounded-2xl bg-background transition-all duration-500 hover:shadow-apple-lg"
             >
               {/* Stars */}
-              <div className="flex gap-1 mb-6">
+              <div className="star-rating flex gap-1 mb-6">
                 {Array.from({ length: testimonial.rating }).map((_, i) => (
                   <Star key={i} className="w-4 h-4 fill-foreground text-foreground" />
                 ))}
