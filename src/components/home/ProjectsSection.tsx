@@ -1,7 +1,12 @@
+import { useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowUpRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const projects = [
   {
@@ -39,11 +44,72 @@ const projects = [
 ];
 
 export const ProjectsSection = () => {
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const headerRef = useRef<HTMLDivElement>(null);
+  const gridRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      // Header animation
+      const headerChildren = headerRef.current?.querySelectorAll(':scope > *');
+      if (headerChildren) {
+        gsap.from(headerChildren, {
+          y: 50,
+          opacity: 0,
+          duration: 1,
+          stagger: 0.15,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: headerRef.current,
+            start: 'top 80%',
+            toggleActions: 'play none none none',
+          },
+        });
+      }
+
+      // Project cards with scale and reveal effect
+      const cards = gridRef.current?.querySelectorAll('.project-card');
+      if (cards) {
+        cards.forEach((card, index) => {
+          gsap.from(card, {
+            scale: 0.9,
+            opacity: 0,
+            y: 60,
+            duration: 1,
+            ease: 'power3.out',
+            scrollTrigger: {
+              trigger: card,
+              start: 'top 85%',
+              toggleActions: 'play none none none',
+            },
+          });
+
+          // Parallax effect on images
+          const image = card.querySelector('img');
+          if (image) {
+            gsap.to(image, {
+              yPercent: -15,
+              ease: 'none',
+              scrollTrigger: {
+                trigger: card,
+                start: 'top bottom',
+                end: 'bottom top',
+                scrub: true,
+              },
+            });
+          }
+        });
+      }
+    });
+
+    return () => ctx.revert();
+  }, []);
+
   return (
-    <section className="section-padding bg-secondary">
+    <section ref={sectionRef} className="section-padding bg-secondary">
       <div className="container-wide">
         {/* Section Header */}
-        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-16 lg:mb-20">
+        <div ref={headerRef} className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-16 lg:mb-20">
           <div>
             <p className="text-sm font-medium text-muted-foreground uppercase tracking-widest mb-4">
               Featured Work
@@ -62,13 +128,13 @@ export const ProjectsSection = () => {
         </div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-          {projects.map((project, index) => (
+        <div ref={gridRef} className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          {projects.map((project) => (
             <Link
               key={project.id}
               to={project.link}
               className={cn(
-                'group relative overflow-hidden rounded-2xl bg-background',
+                'project-card group relative overflow-hidden rounded-2xl bg-background',
                 'transition-all duration-500 ease-apple',
                 'hover:shadow-apple-xl'
               )}
