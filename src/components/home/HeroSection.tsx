@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { ParticleCursor } from '@/components/effects/ParticleCursor';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -84,6 +85,9 @@ export const HeroSection = () => {
 
   return (
     <section ref={sectionRef} className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Particle Cursor Effect */}
+      <ParticleCursor />
+      
       {/* Background Gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-secondary/50 via-background to-background" />
       
