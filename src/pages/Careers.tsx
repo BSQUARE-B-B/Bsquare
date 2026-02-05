@@ -87,7 +87,7 @@ const Careers = () => {
                 <h2 className="headline-md mb-6">Our Culture</h2>
                 <div className="space-y-6 text-muted-foreground">
                   <p className="text-lg leading-relaxed">
-                    At Nexus Digital, we believe great work happens when talented 
+                    At BSquare, we believe great work happens when talented 
                     people come together in an environment that fosters creativity, 
                     collaboration, and growth.
                   </p>

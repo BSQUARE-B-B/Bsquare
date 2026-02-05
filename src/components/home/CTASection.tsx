@@ -51,15 +51,6 @@ export const CTASection = () => {
         stagger: 0.1,
         ease: 'power3.out',
       }, '-=0.3');
-
-      // Subtle floating animation for headline
-      gsap.to(headlineRef.current, {
-        y: -10,
-        duration: 3,
-        ease: 'power1.inOut',
-        yoyo: true,
-        repeat: -1,
-      });
     });
 
     return () => ctx.revert();
@@ -70,7 +61,7 @@ export const CTASection = () => {
       <div className="container-apple">
         <div className="text-center">
           {/* Headline */}
-          <h2 ref={headlineRef} className="headline-xl mb-8">
+          <h2 ref={headlineRef} className="headline-xl mb-10">
             Let's build something<br />
             <span className="text-muted-foreground">exceptional.</span>
           </h2>

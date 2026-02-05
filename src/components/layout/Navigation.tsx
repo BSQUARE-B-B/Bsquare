@@ -50,7 +50,7 @@ export const Navigation = () => {
               to="/" 
               className="text-xl font-semibold tracking-tight hover:opacity-70 transition-opacity"
             >
-              Nexus Digital
+              BSquare
             </Link>
 
             {/* Desktop Navigation */}

@@ -62,7 +62,7 @@ const About = () => {
                 <h2 className="headline-md mb-6">Our Story</h2>
                 <div className="space-y-6 text-muted-foreground">
                   <p className="text-lg leading-relaxed">
-                    Founded in 2016, Nexus Digital began with a simple mission: to bring 
+                    Founded in 2016, BSquare began with a simple mission: to bring 
                     world-class digital experiences to businesses in the UAE and beyond.
                   </p>
                   <p className="leading-relaxed">

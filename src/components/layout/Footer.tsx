@@ -41,7 +41,7 @@ export const Footer = () => {
           {/* Brand Column */}
           <div className="col-span-2 md:col-span-4 lg:col-span-1 mb-8 lg:mb-0">
             <Link to="/" className="text-xl font-semibold tracking-tight">
-              Nexus Digital
+              BSquare
             </Link>
             <p className="mt-4 text-muted-foreground text-sm leading-relaxed max-w-xs">
               Premium digital experiences for forward-thinking brands in the UAE and beyond.
@@ -142,7 +142,7 @@ export const Footer = () => {
       <div className="border-t border-border">
         <div className="container-wide py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
-            <p>© 2024 Nexus Digital. All rights reserved.</p>
+            <p>© 2024 BSquare. All rights reserved.</p>
             <div className="flex gap-6">
               <Link to="/privacy" className="hover:text-foreground transition-colors">
                 Privacy Policy

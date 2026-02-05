@@ -8,7 +8,7 @@ gsap.registerPlugin(ScrollTrigger);
 const testimonials = [
   {
     id: 1,
-    content: "Nexus Digital transformed our online presence completely. The new website has increased our leads by 300% in just six months.",
+    content: "BSquare transformed our online presence completely. The new website has increased our leads by 300% in just six months.",
     author: 'Sarah Al Maktoum',
     role: 'CEO',
     company: 'Emirates Luxury Properties',
@@ -16,7 +16,7 @@ const testimonials = [
   },
   {
     id: 2,
-    content: "Working with Nexus was an exceptional experience. Their attention to detail and understanding of our market is unmatched.",
+    content: "Working with BSquare was an exceptional experience. Their attention to detail and understanding of our market is unmatched.",
     author: 'Ahmed Hassan',
     role: 'Marketing Director',
     company: 'Gulf Health Connect',
