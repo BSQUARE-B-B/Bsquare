@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 0%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 0%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 0%;
+    --primary: 0 0% 0%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 0%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
+    --accent: 0 0% 96%;
+    --accent-foreground: 0 0% 0%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 0 0% 0%;
+    --radius: 1rem;
+    --surface-elevated: 0 0% 98%;
+    --shadow-sm: 0 1px 2px hsla(0, 0%, 0%, 0.04);
+    --shadow-md: 0 4px 12px hsla(0, 0%, 0%, 0.08);
+    --shadow-lg: 0 12px 40px hsla(0, 0%, 0%, 0.12);
+    --shadow-xl: 0 24px 80px hsla(0, 0%, 0%, 0.16);
+  }
+  .dark {
+    --background: 0 0% 0%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 6%;
+    --card-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 0%;
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 60%;
+    --accent: 0 0% 12%;
+    --accent-foreground: 0 0% 98%;
+    --border: 0 0% 18%;
+    --input: 0 0% 18%;
+    --ring: 0 0% 83%;
+  }
+}
+
+@layer base {
+  * { @apply border-border; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-feature-settings: "cv11", "ss01";
+  }
+  h1, h2, h3, h4, h5, h6 { @apply font-semibold tracking-tight; }
+}
+
+@layer components {
+  .container-apple { @apply w-full max-w-[980px] mx-auto px-6 lg:px-0; }
+  .container-wide { @apply w-full max-w-[1200px] mx-auto px-6 lg:px-8; }
+  .section-padding { @apply py-20 lg:py-32; }
+  .headline-xl { @apply text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold tracking-tight leading-[1.05]; }
+  .headline-lg { @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight leading-[1.1]; }
+  .headline-md { @apply text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight leading-[1.15]; }
+  .body-lg { @apply text-lg sm:text-xl md:text-2xl text-muted-foreground leading-relaxed; }
+  .body-md { @apply text-base sm:text-lg text-muted-foreground leading-relaxed; }
+}
