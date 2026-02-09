@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { PlaceholderImage } from "@/components/ui/placeholder-image";
 
 export const metadata: Metadata = {
   title: "About CurveClear | Digital Transformation Firm Dubai",
@@ -43,7 +44,7 @@ export default function AboutPage() {
                 </p>
               </div>
             </div>
-            <div className="aspect-[4/5] rounded-2xl bg-secondary" />
+            <PlaceholderImage aspect="4/5" label="CurveClear" />
           </div>
         </div>
       </section>

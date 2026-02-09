@@ -30,10 +30,30 @@ export default function HomePage() {
       <FrameworkSection />
       <HowWeWorkSection />
       <FeaturedWorkSection />
+      <PortfolioTeaser />
       <IndustriesSection />
       <TestimonialsSection />
       <FinalCTASection />
     </div>
+  );
+}
+
+function PortfolioTeaser() {
+  return (
+    <section className="section-padding border-y border-border bg-secondary/30">
+      <div className="container-apple text-center">
+        <h2 className="headline-lg mb-4">Portfolio & Brand Work</h2>
+        <p className="body-md max-w-xl mx-auto mb-8">
+          Logos, screenshots, and videos from selected projects.
+        </p>
+        <Button variant="heroOutline" size="lg" asChild>
+          <Link href="/portfolio">
+            View Portfolio
+            <ArrowRight className="w-4 h-4 ml-1" />
+          </Link>
+        </Button>
+      </div>
+    </section>
   );
 }
 

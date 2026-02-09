@@ -1,21 +1,13 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import { Navigation } from "@/components/layout/Navigation";
 import { Footer } from "@/components/layout/Footer";
-
-const inter = Inter({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-sans",
-});
-
-// Apply Inter via Tailwind: font-sans uses var(--font-sans) from globals + this variable
 
 const baseUrl = "https://curveclear.ae";
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
+  icons: { icon: "/images/creativecurve.png", apple: "/images/creativecurve.png" },
   title: { default: "Digital Transformation & Systems Firm in Dubai | CurveClear.ae", template: "%s | CurveClear" },
   description:
     "Curveclear Digital Transformation Firm in Dubai delivering strategy, software engineering, automation, AI, and digital growth systems built for scale.",
@@ -46,7 +38,7 @@ const organizationSchema = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={inter.variable}>
+    <html lang="en">
       <head>
         <script
           type="application/ld+json"

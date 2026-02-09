@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { workList } from "@/lib/work-data";
+import { WorkCaseGrid } from "./_components/WorkCaseGrid";
 
 export const metadata: Metadata = {
   title: "Digital Transformation Case Studies | CurveClear",
@@ -14,56 +15,42 @@ export const metadata: Metadata = {
 export default function WorkPage() {
   return (
     <div className="min-h-screen">
-      <section className="pt-32 pb-16 lg:pt-40 lg:pb-20">
+      {/* Hero */}
+      <section className="pt-32 pb-12 lg:pt-40 lg:pb-16">
         <div className="container-apple text-center">
           <h1 className="headline-xl mb-8">
-            Work That Powers<br />
-            <span className="text-muted-foreground">Modern Organizations</span>
+            Work That Shapes<br />
+            <span className="text-muted-foreground">Scalable Organizations</span>
           </h1>
           <p className="body-lg max-w-2xl mx-auto">
-            A selection of structured engagements focused on long-term business impact.
+            A selection of digital systems designed, engineered, and deployed for long-term business impact.
           </p>
         </div>
       </section>
 
+      {/* Case blocks with filters */}
       <section className="pb-20 lg:pb-32">
         <div className="container-wide">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            {workList.map((project) => (
-              <Link
-                key={project.slug}
-                href={`/work/${project.slug}`}
-                className="group block p-8 rounded-2xl bg-secondary hover:shadow-lg transition-shadow"
-              >
-                <span className="text-xs font-medium text-muted-foreground uppercase tracking-widest">
-                  {project.industry}
-                </span>
-                <h2 className="text-2xl font-semibold mt-2 mb-2">{project.title}</h2>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {project.services.map((s) => (
-                    <span key={s} className="text-xs text-muted-foreground">
-                      {s}
-                    </span>
-                  ))}
-                </div>
-                <span className="inline-flex items-center gap-1 text-sm font-medium">
-                  View Case Study
-                  <ArrowUpRight className="w-4 h-4" />
-                </span>
-              </Link>
-            ))}
-          </div>
+          <WorkCaseGrid cases={workList} />
         </div>
       </section>
 
+      {/* CTA band */}
       <section className="section-padding bg-secondary">
         <div className="container-apple text-center">
+          <h2 className="headline-lg mb-6">Build a system like this.</h2>
           <Button variant="hero" size="xl" asChild>
             <Link href="/get-started">
               Get Started
-              <ArrowUpRight className="w-5 h-5 ml-1" />
+              <ArrowRight className="w-5 h-5 ml-1" />
             </Link>
           </Button>
+          <p className="body-md mt-6">
+            Prefer email?{" "}
+            <a href="mailto:info@curveclear.ae" className="text-foreground underline underline-offset-2 hover:opacity-80">
+              info@curveclear.ae
+            </a>
+          </p>
         </div>
       </section>
     </div>

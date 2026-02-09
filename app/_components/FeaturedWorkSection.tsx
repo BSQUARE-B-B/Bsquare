@@ -4,12 +4,10 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowUpRight } from "lucide-react";
+import { MediaBlock } from "@/components/ui/media-block";
+import { getFeaturedWorkCases } from "@/lib/work-data";
 
-const featured = [
-  { title: "Real Estate Portfolio Platform", industry: "Real Estate", slug: "real-estate-portfolio" },
-  { title: "Healthcare Patient Portal", industry: "Healthcare", slug: "healthcare-portal" },
-  { title: "E-commerce Operations Stack", industry: "Retail", slug: "ecommerce-operations" },
-];
+const featured = getFeaturedWorkCases();
 
 export function FeaturedWorkSection() {
   return (
@@ -37,16 +35,26 @@ export function FeaturedWorkSection() {
             >
               <Link
                 href={`/work/${item.slug}`}
-                className="block p-8 rounded-2xl bg-background hover:shadow-lg transition-shadow duration-300"
+                className="block rounded-2xl bg-background hover:shadow-lg transition-shadow duration-300 overflow-hidden"
               >
-                <span className="text-xs font-medium text-muted-foreground uppercase tracking-widest">
-                  {item.industry}
-                </span>
-                <h3 className="text-xl font-semibold mt-2 mb-2">{item.title}</h3>
-                <span className="inline-flex items-center gap-1 text-sm font-medium text-muted-foreground group-hover:text-foreground">
-                  View Case Study
-                  <ArrowUpRight className="w-4 h-4" />
-                </span>
+                <MediaBlock
+                  imageUrl={item.image}
+                  videoUrl={item.video}
+                  aspect="16/10"
+                  rounded="rounded-t-2xl rounded-b-none"
+                  placeholderLabel={item.heroLabel}
+                  sizes="(max-width: 1024px) 100vw, 33vw"
+                />
+                <div className="p-8">
+                  <span className="text-xs font-medium text-muted-foreground uppercase tracking-widest">
+                    {item.industry}
+                  </span>
+                  <h3 className="text-xl font-semibold mt-2 mb-2">{item.title}</h3>
+                  <span className="inline-flex items-center gap-1 text-sm font-medium text-muted-foreground group-hover:text-foreground">
+                    View Case Study
+                    <ArrowUpRight className="w-4 h-4" />
+                  </span>
+                </div>
               </Link>
             </motion.div>
           ))}

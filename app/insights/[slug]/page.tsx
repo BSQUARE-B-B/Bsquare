@@ -5,7 +5,8 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { getInsightBySlug, insightsList } from "@/lib/insights-data";
 import { getInsightContent } from "@/lib/mdx";
-import { MDXRemote } from "next-mdx-remote/rsc";
+import ReactMarkdown from "react-markdown";
+import { PlaceholderImage } from "@/components/ui/placeholder-image";
 
 export const dynamic = "force-dynamic";
 
@@ -64,10 +65,22 @@ export default async function InsightSlugPage({ params }: { params: Promise<{ sl
               {new Date(insight.date).toLocaleDateString("en-AE", { year: "numeric", month: "long", day: "numeric" })}
             </time>
           </header>
+        </div>
 
+        <div className="container-wide mb-12">
+          <PlaceholderImage src={insight.image} aspect="21/9" sizes="100vw" />
+        </div>
+
+        <div className="container-apple">
           {mdxSource ? (
             <div className="prose prose-neutral max-w-none dark:prose-invert">
-              <MDXRemote source={mdxSource} />
+              <ReactMarkdown
+                components={{
+                  a: ({ href, children }) => <Link href={href ?? "#"}>{children}</Link>,
+                }}
+              >
+                {mdxSource}
+              </ReactMarkdown>
             </div>
           ) : (
             <p className="text-muted-foreground">Content for this insight is being prepared.</p>

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const footerLinks = {
   services: [
@@ -18,6 +19,7 @@ const footerLinks = {
   company: [
     { name: "About", path: "/about" },
     { name: "Work", path: "/work" },
+    { name: "Portfolio", path: "/portfolio" },
     { name: "Insights", path: "/insights" },
     { name: "Contact", path: "/contact" },
     { name: "Get Started", path: "/get-started" },
@@ -32,8 +34,14 @@ export function Footer() {
       <div className="container-wide section-padding">
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 lg:gap-12">
           <div className="col-span-2 md:col-span-4 lg:col-span-1 mb-8 lg:mb-0">
-            <Link href="/" className="text-xl font-semibold tracking-tight">
-              CurveClear
+            <Link href="/" className="inline-block hover:opacity-80 transition-opacity">
+              <Image
+                src="/images/creativecurve.png"
+                alt="CurveClear"
+                width={200}
+                height={50}
+                className="h-10 w-auto"
+              />
             </Link>
             <p className="mt-4 text-muted-foreground text-sm leading-relaxed max-w-xs">
               Curveclear Digital Transformation Firm

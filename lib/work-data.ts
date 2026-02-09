@@ -1,9 +1,22 @@
-export const workList = [
-  { slug: "real-estate-portfolio", title: "Real Estate Portfolio Platform", industry: "Real Estate", services: ["Strategy", "Software"] },
-  { slug: "healthcare-portal", title: "Healthcare Patient Portal", industry: "Healthcare", services: ["Software", "Automation"] },
-  { slug: "ecommerce-operations", title: "E-commerce Operations Stack", industry: "Retail", services: ["Automation", "Growth"] },
-];
+/**
+ * Work (case studies) data API. Source of truth: app/_content/workCases.ts
+ */
+import {
+  workCases,
+  getWorkCaseBySlug as getCaseBySlug,
+  getFeaturedWorkCases as getFeatured,
+  type WorkCase,
+} from "@/app/_content/workCases";
 
-export function getWorkBySlug(slug: string) {
-  return workList.find((w) => w.slug === slug);
+/** All completed project cases for /work listing and sitemap */
+export const workList: readonly WorkCase[] = workCases;
+
+/** Get a single case by slug for /work/[slug] */
+export function getWorkBySlug(slug: string): WorkCase | undefined {
+  return getCaseBySlug(slug);
+}
+
+/** Featured cases for home page FeaturedWorkSection */
+export function getFeaturedWorkCases(): readonly WorkCase[] {
+  return getFeatured();
 }

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { solutionsData } from "@/lib/solutions-data";
+import { PlaceholderImage } from "@/components/ui/placeholder-image";
 
 export const metadata: Metadata = {
   title: "Industry-Specific Digital Solutions | CurveClear",
@@ -34,8 +35,16 @@ export default function SolutionsPage() {
               <article
                 key={solution.id}
                 id={solution.id}
-                className="p-8 lg:p-12 rounded-2xl bg-secondary scroll-mt-24"
+                className="rounded-2xl bg-secondary scroll-mt-24 overflow-hidden"
               >
+                <PlaceholderImage
+                  aspect="21/9"
+                  rounded="rounded-t-2xl rounded-b-none"
+                  label={solution.title}
+                  sizes="(max-width: 1024px) 100vw, 1200px"
+                  className="border-0 border-b border-border"
+                />
+                <div className="p-8 lg:p-12">
                 <h2 className="headline-md mb-6">{solution.title}</h2>
                 <div className="grid lg:grid-cols-3 gap-8">
                   <div>
@@ -82,6 +91,7 @@ export default function SolutionsPage() {
                       <ArrowRight className="w-4 h-4 ml-1" />
                     </Link>
                   </Button>
+                </div>
                 </div>
               </article>
             ))}

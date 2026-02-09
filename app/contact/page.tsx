@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ContactForm } from "./_components/ContactForm";
+import { PlaceholderImage } from "@/components/ui/placeholder-image";
 
 export const metadata: Metadata = {
   title: "Contact CurveClear | Digital Transformation & Systems",
@@ -25,26 +26,32 @@ export default function ContactPage() {
         <div className="container-wide">
           <div className="grid lg:grid-cols-2 gap-16">
             <ContactForm />
-            <div>
-              <h2 className="text-xl font-semibold mb-6">Quick Contact</h2>
-              <ul className="space-y-4 text-muted-foreground">
-                <li>
-                  <a href="mailto:info@curveclear.ae" className="hover:text-foreground transition-colors">
-                    info@curveclear.ae
-                  </a>
-                </li>
-                <li>
-                  <a href="tel:+971544141077" className="hover:text-foreground transition-colors">
-                    +971 54 414 1077
-                  </a>
-                </li>
-                <li>
-                  <a href="tel:+971543178016" className="hover:text-foreground transition-colors">
-                    +971 54 317 8016
-                  </a>
-                </li>
-                <li>Dubai, UAE</li>
-              </ul>
+            <div className="space-y-8">
+              <div>
+                <h2 className="text-xl font-semibold mb-6">Quick Contact</h2>
+                <ul className="space-y-4 text-muted-foreground">
+                  <li>
+                    <a href="mailto:info@curveclear.ae" className="hover:text-foreground transition-colors">
+                      info@curveclear.ae
+                    </a>
+                  </li>
+                  <li>
+                    <a href="tel:+971544141077" className="hover:text-foreground transition-colors">
+                      +971 54 414 1077
+                    </a>
+                  </li>
+                  <li>
+                    <a href="tel:+971543178016" className="hover:text-foreground transition-colors">
+                      +971 54 317 8016
+                    </a>
+                  </li>
+                  <li>Dubai, UAE</li>
+                </ul>
+              </div>
+              <div>
+                <h2 className="text-xl font-semibold mb-4">Location</h2>
+                <PlaceholderImage aspect="16/9" label="Dubai, UAE" sizes="(max-width: 1024px) 100vw, 50vw" />
+              </div>
             </div>
           </div>
         </div>

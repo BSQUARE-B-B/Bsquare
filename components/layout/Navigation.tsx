@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -13,6 +14,7 @@ const navLinks = [
   { name: "Services", path: "/services" },
   { name: "Solutions", path: "/solutions" },
   { name: "Work", path: "/work" },
+  { name: "Portfolio", path: "/portfolio" },
   { name: "About", path: "/about" },
   { name: "Insights", path: "/insights" },
   { name: "Contact", path: "/contact" },
@@ -28,10 +30,17 @@ export function Navigation() {
         <div className="flex items-center justify-between h-16 lg:h-20">
           <Link
             href="/"
-            className="text-xl font-semibold tracking-tight hover:opacity-70 transition-opacity min-h-[44px] min-w-[44px] flex items-center"
+            className="hover:opacity-80 transition-opacity min-h-[44px] min-w-[44px] flex items-center"
             aria-label="CurveClear Home"
           >
-            CurveClear
+            <Image
+              src="/images/creativecurve.png"
+              alt="CurveClear"
+              width={200}
+              height={50}
+              className="h-10 w-auto lg:h-12"
+              priority
+            />
           </Link>
 
           <div className="hidden lg:flex items-center gap-1">
@@ -60,6 +69,11 @@ export function Navigation() {
               <button type="button">{open ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}</button>
             </SheetTrigger>
             <SheetContent side="right" className="w-full max-w-sm pt-24">
+              <div className="absolute left-6 top-6">
+                <Link href="/" onClick={() => setOpen(false)} aria-label="CurveClear Home">
+                  <Image src="/images/creativecurve.png" alt="CurveClear" width={160} height={40} className="h-10 w-auto" />
+                </Link>
+              </div>
               <div className="flex flex-col gap-1">
                 {navLinks.map((link) => (
                   <Link

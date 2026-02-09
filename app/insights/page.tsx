@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowUpRight } from "lucide-react";
 import { insightsList } from "@/lib/insights-data";
+import { PlaceholderImage } from "@/components/ui/placeholder-image";
 
 export const metadata: Metadata = {
   title: "Digital Transformation Insights & Analysis | CurveClear",
@@ -47,17 +48,25 @@ export default function InsightsPage() {
               <Link
                 key={insight.slug}
                 href={`/insights/${insight.slug}`}
-                className="group block p-6 rounded-2xl bg-secondary hover:shadow-lg transition-shadow"
+                className="group block rounded-2xl bg-secondary hover:shadow-lg transition-shadow overflow-hidden"
               >
-                <span className="text-xs font-medium text-muted-foreground uppercase tracking-widest">
-                  {insight.category}
-                </span>
-                <h2 className="text-xl font-semibold mt-2 mb-2">{insight.title}</h2>
-                <time className="text-sm text-muted-foreground">{new Date(insight.date).toLocaleDateString("en-AE", { year: "numeric", month: "long", day: "numeric" })}</time>
-                <span className="mt-2 inline-flex items-center gap-1 text-sm font-medium">
-                  Read
-                  <ArrowUpRight className="w-4 h-4" />
-                </span>
+                <PlaceholderImage
+                  src={insight.image}
+                  aspect="16/10"
+                  rounded="rounded-t-2xl rounded-b-none"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                />
+                <div className="p-6">
+                  <span className="text-xs font-medium text-muted-foreground uppercase tracking-widest">
+                    {insight.category}
+                  </span>
+                  <h2 className="text-xl font-semibold mt-2 mb-2">{insight.title}</h2>
+                  <time className="text-sm text-muted-foreground">{new Date(insight.date).toLocaleDateString("en-AE", { year: "numeric", month: "long", day: "numeric" })}</time>
+                  <span className="mt-2 inline-flex items-center gap-1 text-sm font-medium">
+                    Read
+                    <ArrowUpRight className="w-4 h-4" />
+                  </span>
+                </div>
               </Link>
             ))}
           </div>
