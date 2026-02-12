@@ -4,10 +4,10 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, ClipboardList, Code2, Bot, Megaphone } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Digital Transformation Services in Dubai | CurveClear",
+  title: "Digital Transformation Services in Dubai | SEEDRIX",
   description:
-    "Explore CurveClear's strategy-led digital transformation services including software engineering, automation, AI, integrations, and digital growth.",
-  openGraph: { url: "https://curveclear.ae/services" },
+    "Explore SEEDRIX's strategy-led digital transformation services including software engineering, automation, AI, integrations, and digital growth.",
+  openGraph: { url: "https://seedrix.co/services" },
 };
 
 const pillars = [
@@ -59,7 +59,7 @@ export default function ServicesPage() {
               <Link
                 key={pillar.slug}
                 href={`/services/${pillar.slug}`}
-                className="group block p-8 lg:p-10 rounded-2xl bg-secondary hover:bg-secondary/80 transition-colors"
+                className="group block p-8 lg:p-10 rounded-2xl bg-secondary shadow-card-glow hover:bg-secondary/80 transition-colors"
               >
                 <div className="w-14 h-14 rounded-2xl bg-background flex items-center justify-center mb-6">
                   <pillar.icon className="w-6 h-6" />

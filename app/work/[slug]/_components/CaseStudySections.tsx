@@ -4,6 +4,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { GlowDivider } from "@/components/ui/glow-divider";
 import { useMotion } from "@/lib/motion";
 import type { WorkCase } from "@/app/_content/workCases";
 import { SERVICES_TAGS } from "@/app/_content/workCases";
@@ -34,7 +35,7 @@ export function CaseStudySections({ caseStudy }: CaseStudySectionsProps) {
         <p className="body-md max-w-2xl">{caseStudy.context}</p>
       </motion.section>
 
-      <hr className="border-border" />
+      <GlowDivider />
 
       <motion.section
         initial={m.fadeUp.initial}
@@ -49,7 +50,7 @@ export function CaseStudySections({ caseStudy }: CaseStudySectionsProps) {
             return (
               <div
                 key={pillar.id}
-                className={`rounded-2xl border border-border bg-secondary p-6 ${included ? "ring-1 ring-foreground/5" : ""}`}
+                className={`rounded-2xl border border-border bg-secondary p-6 shadow-card-glow ${included ? "ring-1 ring-foreground/5" : ""}`}
               >
                 <div className="flex items-center gap-2 mb-2">
                   <h3 className="text-lg font-semibold tracking-tight">{pillar.title}</h3>
@@ -64,7 +65,7 @@ export function CaseStudySections({ caseStudy }: CaseStudySectionsProps) {
         </div>
       </motion.section>
 
-      <hr className="border-border" />
+      <GlowDivider />
 
       <motion.section
         initial={m.fadeUp.initial}
@@ -76,14 +77,14 @@ export function CaseStudySections({ caseStudy }: CaseStudySectionsProps) {
         <p className="body-md max-w-2xl mb-10">System modules delivered in this engagement.</p>
         <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {caseStudy.systemsBuilt.map((item, i) => (
-            <li key={i} className="rounded-xl border border-border bg-secondary px-5 py-4 text-muted-foreground">
+            <li key={i} className="rounded-xl border border-border bg-secondary px-5 py-4 text-muted-foreground shadow-card-glow">
               {item}
             </li>
           ))}
         </ul>
       </motion.section>
 
-      <hr className="border-border" />
+      <GlowDivider />
 
       <motion.section
         initial={m.fadeUp.initial}
@@ -102,7 +103,7 @@ export function CaseStudySections({ caseStudy }: CaseStudySectionsProps) {
         </ul>
       </motion.section>
 
-      <hr className="border-border" />
+      <GlowDivider />
 
       <motion.section
         initial={m.fadeUp.initial}
@@ -133,8 +134,8 @@ export function CaseStudySections({ caseStudy }: CaseStudySectionsProps) {
         </Button>
         <p className="body-md mt-8">
           Prefer email?{" "}
-          <a href="mailto:info@curveclear.ae" className="text-foreground underline underline-offset-2 hover:opacity-80">
-            info@curveclear.ae
+          <a href="mailto:info@seedrix.co" className="text-foreground underline underline-offset-2 hover:opacity-80">
+            info@seedrix.co
           </a>
           {" · "}
           <a href="tel:+971544141077" className="text-foreground underline underline-offset-2 hover:opacity-80">

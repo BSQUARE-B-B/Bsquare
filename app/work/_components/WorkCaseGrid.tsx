@@ -84,7 +84,7 @@ export function WorkCaseGrid({ cases }: WorkCaseGridProps) {
             >
               {/* Media block - order first on mobile, then alternate on md+ */}
               <div className={mediaLeft ? "md:order-1" : "md:order-2"}>
-                <Link href={`/work/${project.slug}`} className="block overflow-hidden rounded-2xl border border-border bg-secondary shadow-[0_1px_2px_hsla(0,0%,0%,0.04)] md:shadow-[0_4px_12px_hsla(0,0%,0%,0.08)]">
+                <Link href={`/work/${project.slug}`} className="block overflow-hidden rounded-2xl border border-border bg-secondary shadow-card-glow">
                   <MediaBlock
                     imageUrl={project.image}
                     videoUrl={project.video}

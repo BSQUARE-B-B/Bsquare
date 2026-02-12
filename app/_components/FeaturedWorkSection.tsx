@@ -35,7 +35,7 @@ export function FeaturedWorkSection() {
             >
               <Link
                 href={`/work/${item.slug}`}
-                className="block rounded-2xl bg-background hover:shadow-lg transition-shadow duration-300 overflow-hidden"
+                className="block rounded-2xl bg-background shadow-card-glow hover:shadow-[0_0_32px_rgba(69,217,163,0.35)] transition-shadow duration-300 overflow-hidden"
               >
                 <MediaBlock
                   imageUrl={item.image}

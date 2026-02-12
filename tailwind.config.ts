@@ -83,6 +83,7 @@ export default {
         'apple-lg': '0 12px 40px hsla(0, 0%, 0%, 0.12)',
         'apple-xl': '0 24px 80px hsla(0, 0%, 0%, 0.16)',
         'glass': '0 8px 32px hsla(0, 0%, 0%, 0.08)',
+        'card-glow': '0 0 24px rgba(69, 217, 163, 0.25)',
       },
       keyframes: {
         "accordion-down": {
@@ -109,6 +110,10 @@ export default {
           "0%, 100%": { transform: "translateY(0)" },
           "50%": { transform: "translateY(-10px)" },
         },
+        "glow-slide": {
+          "0%": { left: "-33%" },
+          "100%": { left: "100%" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -117,6 +122,7 @@ export default {
         "fade-in-up": "fade-in-up 0.6s ease-out",
         "scale-in": "scale-in 0.4s ease-out",
         "float": "float 6s ease-in-out infinite",
+        "glow-slide": "glow-slide 2.5s ease-in-out infinite",
       },
       transitionTimingFunction: {
         'apple': 'cubic-bezier(0.25, 0.1, 0.25, 1)',

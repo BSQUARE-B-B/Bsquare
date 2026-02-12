@@ -5,10 +5,10 @@ import { ArrowRight } from "lucide-react";
 import { PlaceholderImage } from "@/components/ui/placeholder-image";
 
 export const metadata: Metadata = {
-  title: "About CurveClear | Digital Transformation Firm Dubai",
+  title: "About SEEDRIX | Digital Transformation Firm Dubai",
   description:
-    "Curveclear Digital Transformation Firm operates as a systems-led partner focused on governance, stability, and scalable delivery.",
-  openGraph: { url: "https://curveclear.ae/about" },
+    "SEEDRIX Digital Transformation Firm operates as a systems-led partner focused on governance, stability, and scalable delivery.",
+  openGraph: { url: "https://seedrix.co/about" },
 };
 
 export default function AboutPage() {
@@ -34,7 +34,7 @@ export default function AboutPage() {
               <h2 className="headline-md mb-6">Our Story</h2>
               <div className="space-y-6 text-muted-foreground">
                 <p className="text-lg leading-relaxed">
-                  CurveClear was founded on the belief that sustainable digital transformation requires systems, not
+                  SEEDRIX was founded on the belief that sustainable digital transformation requires systems, not
                   shortcuts. We focus on strategy-led engagements, documented execution, and long-term partnerships.
                 </p>
                 <p className="leading-relaxed">
@@ -44,7 +44,7 @@ export default function AboutPage() {
                 </p>
               </div>
             </div>
-            <PlaceholderImage aspect="4/5" label="CurveClear" />
+            <PlaceholderImage aspect="4/5" label="SEEDRIX" />
           </div>
         </div>
       </section>
@@ -53,14 +53,14 @@ export default function AboutPage() {
         <div className="container-wide">
           <h2 className="headline-md mb-8">Vision & Mission</h2>
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="p-8 rounded-2xl bg-background">
+            <div className="p-8 rounded-2xl bg-background shadow-card-glow">
               <h3 className="text-xl font-semibold mb-4">Vision</h3>
               <p className="text-muted-foreground">
                 To be the partner of choice for organizations that want digital systems built for governance, scale,
                 and long-term value.
               </p>
             </div>
-            <div className="p-8 rounded-2xl bg-background">
+            <div className="p-8 rounded-2xl bg-background shadow-card-glow">
               <h3 className="text-xl font-semibold mb-4">Mission</h3>
               <p className="text-muted-foreground">
                 To deliver strategy-led digital transformation through disciplined execution, documentation, and

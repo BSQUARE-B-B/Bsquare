@@ -7,6 +7,7 @@ import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { GlowDivider } from "@/components/ui/glow-divider";
 import { cn } from "@/lib/utils";
 
 const navLinks = [
@@ -25,20 +26,20 @@ export function Navigation() {
   const pathname = usePathname();
 
   return (
-    <header className="sticky top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border/50">
+    <header className="sticky top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl">
       <nav className="container-wide">
         <div className="flex items-center justify-between h-16 lg:h-20">
           <Link
             href="/"
             className="hover:opacity-80 transition-opacity min-h-[44px] min-w-[44px] flex items-center"
-            aria-label="CurveClear Home"
+            aria-label="SEEDRIX Home"
           >
             <Image
-              src="/images/creativecurve.png"
-              alt="CurveClear"
-              width={200}
-              height={50}
-              className="h-10 w-auto lg:h-12"
+              src="/images/Seedrix%20Black.png"
+              alt="SEEDRIX"
+              width={320}
+              height={80}
+              className="h-14 w-auto lg:h-16"
               priority
             />
           </Link>
@@ -70,8 +71,8 @@ export function Navigation() {
             </SheetTrigger>
             <SheetContent side="right" className="w-full max-w-sm pt-24">
               <div className="absolute left-6 top-6">
-                <Link href="/" onClick={() => setOpen(false)} aria-label="CurveClear Home">
-                  <Image src="/images/creativecurve.png" alt="CurveClear" width={160} height={40} className="h-10 w-auto" />
+                <Link href="/" onClick={() => setOpen(false)} aria-label="SEEDRIX Home">
+                  <Image src="/images/Seedrix%20Black.png" alt="SEEDRIX" width={240} height={60} className="h-14 w-auto" />
                 </Link>
               </div>
               <div className="flex flex-col gap-1">
@@ -100,6 +101,7 @@ export function Navigation() {
           </Sheet>
         </div>
       </nav>
+      <GlowDivider />
     </header>
   );
 }

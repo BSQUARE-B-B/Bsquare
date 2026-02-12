@@ -31,7 +31,7 @@ export function PlaceholderImage({
   return (
     <div
       className={cn(
-        "relative w-full overflow-hidden bg-secondary border border-border",
+        "relative w-full overflow-hidden bg-secondary border border-border shadow-card-glow",
         rounded,
         className
       )}

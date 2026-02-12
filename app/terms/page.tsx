@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Terms & Conditions",
-  description: "CurveClear terms and conditions: scope, payment, IP, liability, and governing law.",
-  openGraph: { url: "https://curveclear.ae/terms" },
+  description: "SEEDRIX terms and conditions: scope, payment, IP, liability, and governing law.",
+  openGraph: { url: "https://seedrix.co/terms" },
 };
 
 export default function TermsPage() {
@@ -15,8 +15,8 @@ export default function TermsPage() {
           <section>
             <h2 className="text-xl font-semibold text-foreground mt-8 mb-4">Scope</h2>
             <p>
-              These terms apply to your use of the CurveClear website and to any engagement you enter into with
-              Curveclear Digital Transformation Firm (“CurveClear”). Specific projects are governed by separate
+              These terms apply to your use of the SEEDRIX website and to any engagement you enter into with
+              SEEDRIX Digital Transformation Firm (“SEEDRIX”). Specific projects are governed by separate
               agreements that define scope, deliverables, timelines, and payment terms.
             </p>
           </section>
@@ -31,15 +31,15 @@ export default function TermsPage() {
           <section>
             <h2 className="text-xl font-semibold text-foreground mt-8 mb-4">Intellectual property</h2>
             <p>
-              Unless otherwise agreed in writing, intellectual property in deliverables created by CurveClear for a
+              Unless otherwise agreed in writing, intellectual property in deliverables created by SEEDRIX for a
               client will be assigned or licensed to the client as set out in the project agreement. Pre-existing
-              materials, tools, and methodologies remain the property of CurveClear.
+              materials, tools, and methodologies remain the property of SEEDRIX.
             </p>
           </section>
           <section>
             <h2 className="text-xl font-semibold text-foreground mt-8 mb-4">Limitation of liability</h2>
             <p>
-              To the fullest extent permitted by law, CurveClear’s liability under or in connection with these terms
+              To the fullest extent permitted by law, SEEDRIX’s liability under or in connection with these terms
               or any engagement is limited to the fees paid by the client for the relevant engagement in the twelve
               months preceding the claim. We are not liable for indirect, consequential, or punitive damages.
             </p>
@@ -54,8 +54,8 @@ export default function TermsPage() {
           <section>
             <p className="mt-8">
               For questions about these terms, contact{" "}
-              <a href="mailto:info@curveclear.ae" className="text-foreground underline">
-                info@curveclear.ae
+              <a href="mailto:info@seedrix.co" className="text-foreground underline">
+                info@seedrix.co
               </a>
               .
             </p>

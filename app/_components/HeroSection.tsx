@@ -9,10 +9,25 @@ const reduceMotion = { opacity: 1, y: 0 };
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-secondary/50 via-background to-background" />
-      <div className="container-apple relative z-10 pt-24 pb-20">
-        <div className="max-w-4xl mx-auto text-center">
+    <>
+      {/* Video first */}
+      <div className="relative w-full h-[85vh] overflow-hidden">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+          aria-hidden
+        >
+          <source src="/images/MAIN_3.mp4" type="video/mp4" />
+        </video>
+      </div>
+      {/* Hero content below */}
+      <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden bg-background">
+        <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-background" />
+        <div className="container-apple relative z-10 pt-24 pb-20">
+          <div className="max-w-4xl mx-auto text-center">
           <motion.p
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary text-sm text-muted-foreground mb-8"
             initial={{ opacity: 0, y: 20 }}
@@ -55,8 +70,9 @@ export function HeroSection() {
               <Link href="/services">Explore Our Services</Link>
             </Button>
           </motion.div>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }

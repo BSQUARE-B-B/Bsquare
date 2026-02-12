@@ -6,10 +6,10 @@ import { workList } from "@/lib/work-data";
 import { WorkCaseGrid } from "./_components/WorkCaseGrid";
 
 export const metadata: Metadata = {
-  title: "Digital Transformation Case Studies | CurveClear",
+  title: "Digital Transformation Case Studies | SEEDRIX",
   description:
-    "Explore selected digital transformation, software engineering, and automation projects delivered by CurveClear.",
-  openGraph: { url: "https://curveclear.ae/work" },
+    "Explore selected digital transformation, software engineering, and automation projects delivered by SEEDRIX.",
+  openGraph: { url: "https://seedrix.co/work" },
 };
 
 export default function WorkPage() {
@@ -47,8 +47,8 @@ export default function WorkPage() {
           </Button>
           <p className="body-md mt-6">
             Prefer email?{" "}
-            <a href="mailto:info@curveclear.ae" className="text-foreground underline underline-offset-2 hover:opacity-80">
-              info@curveclear.ae
+            <a href="mailto:info@seedrix.co" className="text-foreground underline underline-offset-2 hover:opacity-80">
+              info@seedrix.co
             </a>
           </p>
         </div>

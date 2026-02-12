@@ -36,7 +36,7 @@ export function TestimonialsSection() {
           {testimonials.map((t, i) => (
             <motion.blockquote
               key={i}
-              className="p-8 rounded-2xl bg-background"
+              className="p-8 rounded-2xl bg-background shadow-card-glow"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-40px" }}

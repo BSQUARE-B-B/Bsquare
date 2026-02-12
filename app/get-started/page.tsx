@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import { GetStartedForm } from "./_components/GetStartedForm";
 
 export const metadata: Metadata = {
-  title: "Get Started with CurveClear | Strategy & System Design",
+  title: "Get Started with SEEDRIX | Strategy & System Design",
   description:
-    "Start with CurveClear. Share your business context and goals — we'll respond with structured next steps within 24 business hours.",
-  openGraph: { url: "https://curveclear.ae/get-started" },
+    "Start with SEEDRIX. Share your business context and goals — we'll respond with structured next steps within 24 business hours.",
+  openGraph: { url: "https://seedrix.co/get-started" },
 };
 
 export default function GetStartedPage() {
@@ -13,7 +13,7 @@ export default function GetStartedPage() {
     <div className="min-h-screen">
       <section className="pt-32 pb-16 lg:pt-40 lg:pb-20">
         <div className="container-apple text-center mb-16">
-          <h1 className="headline-xl mb-8">Get Started with CurveClear</h1>
+          <h1 className="headline-xl mb-8">Get Started with SEEDRIX</h1>
           <p className="body-lg max-w-2xl mx-auto">
             Share your objectives, constraints, and timeline. Our team will review your submission and respond with
             next steps.

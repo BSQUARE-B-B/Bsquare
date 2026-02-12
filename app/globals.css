@@ -20,7 +20,7 @@
     --accent-foreground: 0 0% 0%;
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
-    --border: 0 0% 90%;
+    --border: 160 60% 56%;
     --input: 0 0% 90%;
     --ring: 0 0% 0%;
     --radius: 1rem;
@@ -43,7 +43,7 @@
     --muted-foreground: 0 0% 60%;
     --accent: 0 0% 12%;
     --accent-foreground: 0 0% 98%;
-    --border: 0 0% 18%;
+    --border: 160 55% 62%;
     --input: 0 0% 18%;
     --ring: 0 0% 83%;
   }

@@ -47,7 +47,7 @@ export async function POST(request: Request) {
       if (error) {
         console.error("Supabase leads insert error:", error);
         return NextResponse.json(
-          { error: "Failed to save submission. Please try again or email info@curveclear.ae." },
+          { error: "Failed to save submission. Please try again or email info@seedrix.co." },
           { status: 500 }
         );
       }
@@ -60,7 +60,7 @@ export async function POST(request: Request) {
   } catch (e) {
     console.error("Leads API error:", e);
     return NextResponse.json(
-      { error: "Something went wrong. Please try again or email info@curveclear.ae." },
+      { error: "Something went wrong. Please try again or email info@seedrix.co." },
       { status: 500 }
     );
   }

@@ -6,10 +6,10 @@ import { insightsList } from "@/lib/insights-data";
 import { PlaceholderImage } from "@/components/ui/placeholder-image";
 
 export const metadata: Metadata = {
-  title: "Digital Transformation Insights & Analysis | CurveClear",
+  title: "Digital Transformation Insights & Analysis | SEEDRIX",
   description:
     "Strategy-led insights on automation, AI adoption, software scalability, and digital transformation for modern businesses.",
-  openGraph: { url: "https://curveclear.ae/insights" },
+  openGraph: { url: "https://seedrix.co/insights" },
 };
 
 const categories = ["Transformation", "Automation", "Engineering", "Growth"];
@@ -48,7 +48,7 @@ export default function InsightsPage() {
               <Link
                 key={insight.slug}
                 href={`/insights/${insight.slug}`}
-                className="group block rounded-2xl bg-secondary hover:shadow-lg transition-shadow overflow-hidden"
+                className="group block rounded-2xl bg-secondary shadow-card-glow hover:shadow-[0_0_32px_rgba(69,217,163,0.35)] transition-shadow overflow-hidden"
               >
                 <PlaceholderImage
                   src={insight.image}

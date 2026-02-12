@@ -19,11 +19,11 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params;
   const caseStudy = getWorkBySlug(slug);
-  if (!caseStudy) return { title: "Case Study | CurveClear" };
+  if (!caseStudy) return { title: "Case Study | SEEDRIX" };
   return {
-    title: `${caseStudy.title} Case Study | CurveClear`,
+    title: `${caseStudy.title} Case Study | SEEDRIX`,
     description: `${caseStudy.context} Industry: ${caseStudy.industry}.`,
-    openGraph: { url: `https://curveclear.ae/work/${slug}` },
+    openGraph: { url: `https://seedrix.co/work/${slug}` },
   };
 }
 
@@ -46,12 +46,12 @@ export default async function WorkSlugPage({
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Work", item: "https://curveclear.ae/work" },
+      { "@type": "ListItem", position: 1, name: "Work", item: "https://seedrix.co/work" },
       {
         "@type": "ListItem",
         position: 2,
         name: caseStudy.title,
-        item: `https://curveclear.ae/work/${slug}`,
+        item: `https://seedrix.co/work/${slug}`,
       },
     ],
   };

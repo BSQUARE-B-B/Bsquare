@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "CurveClear — Digital Transformation & Systems Firm";
+export const alt = "SEEDRIX — Digital Transformation & Systems Firm";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -20,7 +20,7 @@ export default async function Image() {
         }}
       >
         <div style={{ fontSize: 56, fontWeight: 600, color: "#0a0a0a", letterSpacing: "-0.02em" }}>
-          CurveClear
+          SEEDRIX
         </div>
         <div style={{ fontSize: 28, color: "#525252", marginTop: 12 }}>
           Digital Transformation & Systems — Dubai, UAE

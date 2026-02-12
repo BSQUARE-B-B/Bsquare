@@ -7,6 +7,7 @@ import { getInsightBySlug, insightsList } from "@/lib/insights-data";
 import { getInsightContent } from "@/lib/mdx";
 import ReactMarkdown from "react-markdown";
 import { PlaceholderImage } from "@/components/ui/placeholder-image";
+import { GlowDivider } from "@/components/ui/glow-divider";
 
 export const dynamic = "force-dynamic";
 
@@ -17,11 +18,11 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const insight = getInsightBySlug(slug);
-  if (!insight) return { title: "Insight | CurveClear" };
+  if (!insight) return { title: "Insight | SEEDRIX" };
   return {
-    title: `${insight.title} | CurveClear`,
+    title: `${insight.title} | SEEDRIX`,
     description: "Strategy-led insights on digital transformation, automation, and software scalability.",
-    openGraph: { url: `https://curveclear.ae/insights/${slug}` },
+    openGraph: { url: `https://seedrix.co/insights/${slug}` },
   };
 }
 
@@ -36,8 +37,8 @@ export default async function InsightSlugPage({ params }: { params: Promise<{ sl
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Insights", item: "https://curveclear.ae/insights" },
-      { "@type": "ListItem", position: 2, name: insight.title, item: `https://curveclear.ae/insights/${slug}` },
+      { "@type": "ListItem", position: 1, name: "Insights", item: "https://seedrix.co/insights" },
+      { "@type": "ListItem", position: 2, name: insight.title, item: `https://seedrix.co/insights/${slug}` },
     ],
   };
 
@@ -86,7 +87,8 @@ export default async function InsightSlugPage({ params }: { params: Promise<{ sl
             <p className="text-muted-foreground">Content for this insight is being prepared.</p>
           )}
 
-          <div className="mt-12 pt-8 border-t border-border flex flex-wrap gap-4">
+          <GlowDivider className="mt-12" />
+          <div className="pt-8 flex flex-wrap gap-4">
             <Button variant="hero" size="sm" asChild>
               <Link href="/get-started">Get Started</Link>
             </Button>

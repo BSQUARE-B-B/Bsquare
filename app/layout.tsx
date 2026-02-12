@@ -3,20 +3,20 @@ import "./globals.css";
 import { Navigation } from "@/components/layout/Navigation";
 import { Footer } from "@/components/layout/Footer";
 
-const baseUrl = "https://curveclear.ae";
+const baseUrl = "https://seedrix.co";
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
-  icons: { icon: "/images/creativecurve.png", apple: "/images/creativecurve.png" },
-  title: { default: "Digital Transformation & Systems Firm in Dubai | CurveClear.ae", template: "%s | CurveClear" },
+  icons: { icon: "/images/Seedrix%20Black.png", apple: "/images/Seedrix%20Black.png" },
+  title: { default: "Digital Transformation & Systems Firm in Dubai | SEEDRIX.co", template: "%s | SEEDRIX" },
   description:
-    "Curveclear Digital Transformation Firm in Dubai delivering strategy, software engineering, automation, AI, and digital growth systems built for scale.",
+    "SEEDRIX Digital Transformation Firm in Dubai delivering strategy, software engineering, automation, AI, and digital growth systems built for scale.",
   openGraph: {
     type: "website",
     locale: "en_AE",
     url: baseUrl,
-    siteName: "CurveClear",
-    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "CurveClear — Digital Transformation & Systems Firm" }],
+    siteName: "SEEDRIX",
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "SEEDRIX — Digital Transformation & Systems Firm" }],
   },
   twitter: { card: "summary_large_image", images: ["/opengraph-image"] },
   robots: { index: true, follow: true },
@@ -25,9 +25,9 @@ export const metadata: Metadata = {
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": ["Organization", "LocalBusiness"],
-  name: "Curveclear Digital Transformation Firm",
+  name: "SEEDRIX Digital Transformation Firm",
   url: baseUrl,
-  email: "info@curveclear.ae",
+  email: "info@seedrix.co",
   telephone: ["+971544141077", "+971543178016"],
   address: {
     "@type": "PostalAddress",

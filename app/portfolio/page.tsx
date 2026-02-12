@@ -8,10 +8,10 @@ import { Button } from "@/components/ui/button";
 import { ArrowUpRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Portfolio | CurveClear",
+  title: "Portfolio | SEEDRIX",
   description:
     "Logos, screenshots, and videos from selected brand and digital transformation projects.",
-  openGraph: { url: "https://curveclear.ae/portfolio" },
+  openGraph: { url: "https://seedrix.co/portfolio" },
 };
 
 export default function PortfolioPage() {
@@ -34,7 +34,7 @@ export default function PortfolioPage() {
           {portfolioBrands.map((brand) => (
             <article
               key={brand.id}
-              className="rounded-2xl border border-border bg-secondary overflow-hidden"
+              className="rounded-2xl border border-border bg-secondary overflow-hidden shadow-card-glow"
             >
               <div className="p-8 lg:p-12">
                 <h2 className="headline-md mb-8">{brand.name}</h2>
@@ -45,7 +45,7 @@ export default function PortfolioPage() {
                     Logo
                   </p>
                   {brand.logo ? (
-                    <div className="relative h-24 w-48 rounded-xl border border-border bg-background overflow-hidden">
+                    <div className="relative h-24 w-48 rounded-xl border border-border bg-background overflow-hidden shadow-card-glow">
                       <Image
                         src={brand.logo}
                         alt={`${brand.name} logo`}
@@ -54,7 +54,7 @@ export default function PortfolioPage() {
                       />
                     </div>
                   ) : (
-                    <div className="h-24 w-48 rounded-xl border border-border bg-background flex items-center justify-center text-xs text-muted-foreground">
+                    <div className="h-24 w-48 rounded-xl border border-border bg-background flex items-center justify-center text-xs text-muted-foreground shadow-card-glow">
                       Placeholder
                     </div>
                   )}
@@ -68,7 +68,7 @@ export default function PortfolioPage() {
                   <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                     {brand.screenshots.length > 0 ? (
                       brand.screenshots.map((src, i) => (
-                        <div key={i} className="relative aspect-video rounded-xl overflow-hidden border border-border">
+                        <div key={i} className="relative aspect-video rounded-xl overflow-hidden border border-border shadow-card-glow">
                           <Image src={src} alt="" fill className="object-cover" sizes="25vw" />
                         </div>
                       ))

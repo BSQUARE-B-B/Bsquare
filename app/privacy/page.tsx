@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
-  description: "CurveClear privacy policy: what data we collect, how we use it, and how to contact us.",
-  openGraph: { url: "https://curveclear.ae/privacy" },
+  description: "SEEDRIX privacy policy: what data we collect, how we use it, and how to contact us.",
+  openGraph: { url: "https://seedrix.co/privacy" },
 };
 
 export default function PrivacyPage() {
@@ -41,8 +41,8 @@ export default function PrivacyPage() {
             <p>
               You may request access, correction, or deletion of your personal data. For any privacy-related requests
               or questions, contact us at{" "}
-              <a href="mailto:info@curveclear.ae" className="text-foreground underline">
-                info@curveclear.ae
+              <a href="mailto:info@seedrix.co" className="text-foreground underline">
+                info@seedrix.co
               </a>
               .
             </p>

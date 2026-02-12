@@ -3,10 +3,10 @@ import { ContactForm } from "./_components/ContactForm";
 import { PlaceholderImage } from "@/components/ui/placeholder-image";
 
 export const metadata: Metadata = {
-  title: "Contact CurveClear | Digital Transformation & Systems",
+  title: "Contact SEEDRIX | Digital Transformation & Systems",
   description:
-    "Contact CurveClear for partnerships, proposals, and general inquiries. For new projects, use the Get Started form.",
-  openGraph: { url: "https://curveclear.ae/contact" },
+    "Contact SEEDRIX for partnerships, proposals, and general inquiries. For new projects, use the Get Started form.",
+  openGraph: { url: "https://seedrix.co/contact" },
 };
 
 export default function ContactPage() {
@@ -31,8 +31,8 @@ export default function ContactPage() {
                 <h2 className="text-xl font-semibold mb-6">Quick Contact</h2>
                 <ul className="space-y-4 text-muted-foreground">
                   <li>
-                    <a href="mailto:info@curveclear.ae" className="hover:text-foreground transition-colors">
-                      info@curveclear.ae
+                    <a href="mailto:info@seedrix.co" className="hover:text-foreground transition-colors">
+                      info@seedrix.co
                     </a>
                   </li>
                   <li>

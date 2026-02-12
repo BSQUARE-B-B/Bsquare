@@ -14,11 +14,11 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const service = servicesData[slug];
-  if (!service) return { title: "Service | CurveClear" };
+  if (!service) return { title: "Service | SEEDRIX" };
   return {
-    title: `${service.title} for Scalable Businesses | CurveClear`,
-    description: `CurveClear delivers ${service.title.toLowerCase()} solutions designed for operational efficiency, system stability, and business scalability.`,
-    openGraph: { url: `https://curveclear.ae/services/${slug}` },
+    title: `${service.title} for Scalable Businesses | SEEDRIX`,
+    description: `SEEDRIX delivers ${service.title.toLowerCase()} solutions designed for operational efficiency, system stability, and business scalability.`,
+    openGraph: { url: `https://seedrix.co/services/${slug}` },
   };
 }
 
@@ -31,8 +31,8 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Services", item: "https://curveclear.ae/services" },
-      { "@type": "ListItem", position: 2, name: service.title, item: `https://curveclear.ae/services/${slug}` },
+      { "@type": "ListItem", position: 1, name: "Services", item: "https://seedrix.co/services" },
+      { "@type": "ListItem", position: 2, name: service.title, item: `https://seedrix.co/services/${slug}` },
     ],
   };
 
@@ -61,7 +61,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
           <h2 className="headline-md mb-8">What We Deliver</h2>
           <div className="grid gap-6 md:grid-cols-2">
             {service.outcomes.map((outcome, i) => (
-              <div key={i} className="p-8 rounded-2xl bg-secondary">
+              <div key={i} className="p-8 rounded-2xl bg-secondary shadow-card-glow">
                 <h3 className="text-xl font-semibold mb-2">{outcome.title}</h3>
                 <p className="text-muted-foreground">{outcome.description}</p>
               </div>
@@ -88,17 +88,17 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
         <div className="container-wide">
           <h2 className="headline-md mb-6">Engagement Model</h2>
           <ol className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <li className="p-6 rounded-2xl bg-secondary">
+            <li className="p-6 rounded-2xl bg-secondary shadow-card-glow">
               <span className="text-sm font-medium text-muted-foreground">1</span>
               <h3 className="text-lg font-semibold mt-2">Assessment</h3>
               <p className="text-muted-foreground text-sm mt-1">Structured discovery and scope definition.</p>
             </li>
-            <li className="p-6 rounded-2xl bg-secondary">
+            <li className="p-6 rounded-2xl bg-secondary shadow-card-glow">
               <span className="text-sm font-medium text-muted-foreground">2</span>
               <h3 className="text-lg font-semibold mt-2">Implementation</h3>
               <p className="text-muted-foreground text-sm mt-1">Phased delivery with clear milestones.</p>
             </li>
-            <li className="p-6 rounded-2xl bg-secondary">
+            <li className="p-6 rounded-2xl bg-secondary shadow-card-glow">
               <span className="text-sm font-medium text-muted-foreground">3</span>
               <h3 className="text-lg font-semibold mt-2">Retainer</h3>
               <p className="text-muted-foreground text-sm mt-1">Ongoing optimization and support.</p>

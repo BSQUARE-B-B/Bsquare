@@ -75,7 +75,7 @@ export function GetStartedForm() {
       }
       setDone(true);
     } catch (err) {
-      setError(err instanceof Error ? err.message : "Submission failed. Please try again or email info@curveclear.ae.");
+      setError(err instanceof Error ? err.message : "Submission failed. Please try again or email info@seedrix.co.");
     } finally {
       setLoading(false);
     }

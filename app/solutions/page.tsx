@@ -6,10 +6,10 @@ import { solutionsData } from "@/lib/solutions-data";
 import { PlaceholderImage } from "@/components/ui/placeholder-image";
 
 export const metadata: Metadata = {
-  title: "Industry-Specific Digital Solutions | CurveClear",
+  title: "Industry-Specific Digital Solutions | SEEDRIX",
   description:
-    "CurveClear delivers tailored digital transformation solutions for real estate, healthcare, retail, professional services, logistics, and startups.",
-  openGraph: { url: "https://curveclear.ae/solutions" },
+    "SEEDRIX delivers tailored digital transformation solutions for real estate, healthcare, retail, professional services, logistics, and startups.",
+  openGraph: { url: "https://seedrix.co/solutions" },
 };
 
 export default function SolutionsPage() {
@@ -35,7 +35,7 @@ export default function SolutionsPage() {
               <article
                 key={solution.id}
                 id={solution.id}
-                className="rounded-2xl bg-secondary scroll-mt-24 overflow-hidden"
+                className="rounded-2xl bg-secondary shadow-card-glow scroll-mt-24 overflow-hidden"
               >
                 <PlaceholderImage
                   aspect="21/9"

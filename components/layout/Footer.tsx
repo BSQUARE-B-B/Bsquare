@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { GlowDivider } from "@/components/ui/glow-divider";
 
 const footerLinks = {
   services: [
@@ -30,21 +31,22 @@ const currentYear = new Date().getFullYear();
 
 export function Footer() {
   return (
-    <footer className="bg-secondary border-t border-border">
+    <footer className="bg-secondary">
+      <GlowDivider />
       <div className="container-wide section-padding">
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 lg:gap-12">
           <div className="col-span-2 md:col-span-4 lg:col-span-1 mb-8 lg:mb-0">
             <Link href="/" className="inline-block hover:opacity-80 transition-opacity">
               <Image
-                src="/images/creativecurve.png"
-                alt="CurveClear"
-                width={200}
-                height={50}
-                className="h-10 w-auto"
+                src="/images/Seedrix%20Black.png"
+                alt="SEEDRIX"
+                width={280}
+                height={70}
+                className="h-14 w-auto"
               />
             </Link>
             <p className="mt-4 text-muted-foreground text-sm leading-relaxed max-w-xs">
-              Curveclear Digital Transformation Firm
+              SEEDRIX Digital Transformation Firm
             </p>
             <p className="mt-2 text-muted-foreground text-sm leading-relaxed max-w-xs">
               Digital transformation, software engineering, automation, and growth systems — built for scale.
@@ -94,8 +96,8 @@ export function Footer() {
             <h3 className="text-sm font-semibold mb-4">Contact</h3>
             <ul className="space-y-3 text-sm text-muted-foreground">
               <li>
-                <a href="mailto:info@curveclear.ae" className="hover:text-foreground transition-colors">
-                  info@curveclear.ae
+                <a href="mailto:info@seedrix.co" className="hover:text-foreground transition-colors">
+                  info@seedrix.co
                 </a>
               </li>
               <li>
@@ -114,10 +116,10 @@ export function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-border">
+      <GlowDivider />
         <div className="container-wide py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
-            <p>© {currentYear} Curveclear Digital Transformation Firm. All rights reserved.</p>
+            <p>© {currentYear} SEEDRIX Digital Transformation Firm. All rights reserved.</p>
             <div className="flex gap-6">
               <Link href="/privacy" className="hover:text-foreground transition-colors">
                 Privacy Policy
@@ -128,7 +130,6 @@ export function Footer() {
             </div>
           </div>
         </div>
-      </div>
     </footer>
   );
 }

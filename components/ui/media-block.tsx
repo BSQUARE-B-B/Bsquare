@@ -55,7 +55,7 @@ export function MediaBlock({
   children,
 }: MediaBlockProps) {
   const wrapperCn = cn(
-    "overflow-hidden bg-secondary border border-border",
+    "overflow-hidden bg-secondary border border-border shadow-card-glow",
     rounded,
     shadow && "shadow-[0_1px_2px_hsla(0,0%,0%,0.04)]",
     className

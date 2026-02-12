@@ -2,7 +2,7 @@ import { MetadataRoute } from "next";
 import { workList } from "@/lib/work-data";
 import { insightsList } from "@/lib/insights-data";
 
-const base = "https://curveclear.ae";
+const base = "https://seedrix.co";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const servicesSlugs = ["strategy-consulting", "software-engineering", "automation-ai-data", "media-digital-growth"];

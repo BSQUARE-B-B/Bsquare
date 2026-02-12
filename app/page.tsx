@@ -11,14 +11,14 @@ import { TestimonialsSection } from "./_components/TestimonialsSection";
 import { FinalCTASection } from "./_components/FinalCTASection";
 
 export const metadata: Metadata = {
-  title: "Digital Transformation & Systems Firm in Dubai | CurveClear.ae",
+  title: "Digital Transformation & Systems Firm in Dubai | SEEDRIX.co",
   description:
-    "Curveclear Digital Transformation Firm in Dubai delivering strategy, software engineering, automation, AI, and digital growth systems built for scale.",
+    "SEEDRIX Digital Transformation Firm in Dubai delivering strategy, software engineering, automation, AI, and digital growth systems built for scale.",
   openGraph: {
-    title: "Digital Transformation & Systems Firm in Dubai | CurveClear.ae",
+    title: "Digital Transformation & Systems Firm in Dubai | SEEDRIX.co",
     description:
-      "Curveclear Digital Transformation Firm in Dubai delivering strategy, software engineering, automation, AI, and digital growth systems built for scale.",
-    url: "https://curveclear.ae",
+      "SEEDRIX Digital Transformation Firm in Dubai delivering strategy, software engineering, automation, AI, and digital growth systems built for scale.",
+    url: "https://seedrix.co",
   },
 };
 

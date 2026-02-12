@@ -31,7 +31,7 @@ export function FinalCTASection() {
           </Button>
         </motion.div>
         <p className="mt-6 text-sm text-muted-foreground">
-          Prefer email? <a href="mailto:info@curveclear.ae" className="underline hover:text-foreground">info@curveclear.ae</a>
+          Prefer email? <a href="mailto:info@seedrix.co" className="underline hover:text-foreground">info@seedrix.co</a>
         </p>
       </div>
     </section>
