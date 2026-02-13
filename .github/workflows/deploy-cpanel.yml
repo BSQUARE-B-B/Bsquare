@@ -1,0 +1,36 @@
+# Build the Next.js site and upload the static export to cPanel via FTP.
+# Requires GitHub secrets: FTP_SERVER, FTP_USERNAME, FTP_PASSWORD
+# Optional: FTP_REMOTE_DIR (default: public_html)
+name: Build and deploy to cPanel (FTP)
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: ".nvmrc"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build static export
+        run: npm run build
+
+      - name: Deploy to cPanel via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./out/
+          server-dir: public_html/
+          dangerous-clean-slate: false
