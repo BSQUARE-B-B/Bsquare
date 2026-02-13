@@ -25,3 +25,6 @@ dist-ssr
 
 # Netlify CLI
 .netlify
+
+# cPanel API config (contains DB credentials)
+public/api/config.php

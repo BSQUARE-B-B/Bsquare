@@ -4,6 +4,8 @@ import { insightsList } from "@/lib/insights-data";
 
 const base = "https://seedrix.co";
 
+export const dynamic = "force-static";
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const servicesSlugs = ["strategy-consulting", "software-engineering", "automation-ai-data", "media-digital-growth"];
   const staticPages: MetadataRoute.Sitemap = [

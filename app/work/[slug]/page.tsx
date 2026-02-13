@@ -6,8 +6,6 @@ import { getWorkBySlug, workList } from "@/lib/work-data";
 import { MediaBlock } from "@/components/ui/media-block";
 import { CaseStudySections } from "./_components/CaseStudySections";
 
-export const dynamic = "force-dynamic";
-
 export async function generateStaticParams() {
   return workList.map((w) => ({ slug: w.slug }));
 }

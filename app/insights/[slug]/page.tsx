@@ -9,8 +9,6 @@ import ReactMarkdown from "react-markdown";
 import { PlaceholderImage } from "@/components/ui/placeholder-image";
 import { GlowDivider } from "@/components/ui/glow-divider";
 
-export const dynamic = "force-dynamic";
-
 export async function generateStaticParams() {
   return insightsList.map((i) => ({ slug: i.slug }));
 }

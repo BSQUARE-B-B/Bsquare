@@ -6,6 +6,8 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 
+const LEAD_API = "/api/save-lead.php";
+
 const industries = [
   "Real Estate & Construction",
   "Healthcare & Clinics",
@@ -64,15 +66,13 @@ export function GetStartedForm() {
 
     setLoading(true);
     try {
-      const res = await fetch("/api/leads", {
+      const res = await fetch(LEAD_API, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
       });
-      if (!res.ok) {
-        const data = await res.json().catch(() => ({}));
-        throw new Error(data.error || "Something went wrong.");
-      }
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) throw new Error((data as { error?: string }).error || "Something went wrong.");
       setDone(true);
     } catch (err) {
       setError(err instanceof Error ? err.message : "Submission failed. Please try again or email info@seedrix.co.");
